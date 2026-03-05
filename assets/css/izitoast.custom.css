@@ -1,0 +1,84 @@
+/* Izitoast */
+.iziToast {
+    border: 1px solid #e1e7ec;
+    background: #f5f5f5;
+}
+
+.iziToast::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 8px 10px -4px rgba(0,0,0,0.2);
+    content: '';
+    z-index: -1;
+}
+
+.iziToast>.iziToast-body .iziToast-icon {
+    font-size: 17px;
+    line-height: 18px;
+    margin-top: -8px;
+    width: 18px;
+    height: 18px;
+}
+
+.iziToast.iziToast-animateInside .iziToast-icon {
+    opacity: 1;
+}
+
+.iziToast.iziToast-info {
+    border-color: rgba(80,198,233,0.3);
+    background-color: #e6f7fc;
+    color: #39bfe6;
+}
+
+.iziToast.iziToast-info>.iziToast-body .iziToast-message,
+.iziToast.iziToast-info>.iziToast-body .iziToast-icon {
+    color: #39bfe6;
+}
+
+.iziToast.iziToast-warning {
+    border-color: rgba(255,183,79,0.3);
+    background-color: #fff6e8;
+    color: #ffb140;
+}
+
+.iziToast.iziToast-warning>.iziToast-body .iziToast-message,
+.iziToast.iziToast-warning>.iziToast-body .iziToast-icon {
+    color: #ffb140;
+}
+
+.iziToast.iziToast-success {
+    border-color: rgba(67,217,163,0.3);
+    background-color: #dcf8ee;
+    color: #2bd396;
+}
+
+.iziToast.iziToast-success>.iziToast-body .iziToast-message,
+.iziToast.iziToast-success>.iziToast-body .iziToast-icon {
+    color: #2bd396;
+}
+
+.iziToast.iziToast-danger {
+    border-color: rgba(255,82,82,0.3);
+    background-color: #ffebeb;
+    color: #ff5252;
+}
+
+.iziToast.iziToast-danger>.iziToast-body .iziToast-message,
+.iziToast.iziToast-danger>.iziToast-body .iziToast-icon {
+    color: #ff5252;
+}
+
+.iziToast.iziToast-dark {
+    border-color: #c6c8ca;
+    background-color: #d6d8d9;
+    color: #1b1e21;
+}
+
+.iziToast.iziToast-dark>.iziToast-body .iziToast-message,
+.iziToast.iziToast-dark>.iziToast-body .iziToast-icon {
+    color: #1b1e21;
+}

@@ -1,0 +1,45 @@
+<div th:fragment="jayor-modal" id="jayor-modal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+    	<div class="modal-content">
+      		<div class="modal-body">
+        		<div class="col-12">
+        			<div class="d-flex justify-content-center align-items-center" style="margin-top: 25px;">
+        				<img th:src="@{'/assets/src/header-footer/logo-dark.png'}" width="90" class="dark-logo" alt="Jayor" title="">
+        			</div>
+        		</div>
+        		<div class="row">
+	        		<div class="col-10 offset-1 modal-text">
+	        			<div class="md-m-25px-b justify-content-center text-center" style="margin-top: 25px;">
+		                	<h3 class="modal-text text-primary m-20px-b theme-after after-50px">Profesionales sanitarios</h3>
+		                </div>
+		                <div class="md-m-25px-b justify-content-center text-center">
+		                	<p>Laboratorios Jayor le informa que el contenido de esta página está destinado <b>exclusivamente a profesionales sanitarios.</b></p>
+		                </div>
+		                <div class="md-m-25px-b justify-content-center text-center">
+		                	<p>Si usted es un profesional por favor pulsa <b>¨SI¨</b> para continuar y si no lo es pulse <b>¨NO¨</b> para salir.</p>
+		                </div>
+		                <div class="md-m-25px-b justify-content-center text-center">
+		                	<p style="letter-spacing: 2.5px;">GRACIAS</p>
+		                </div>
+		                <div class="md-m-25px-b justify-content-center text-center form-group">
+		                	<button id="btn-jayor-panel-ok" class="btn btn-sm btn-primary btn-jayor-panel" style="margin-right: 10px; min-width: 70px;">SI</button>
+		                	<button id="btn-jayor-panel-no" class="btn btn-sm btn-primary btn-jayor-panel" style="min-width: 70px;">NO</button>
+		                </div>
+	                </div>
+        		</div>
+        		<row>
+        			<div class="col-12">
+        				<div class="md-m-25px-b justify-content-center text-center jayor-panel-footer" style="margin-top: 25px;">
+        					<div class="col-10 offset-1">
+        						<p>
+        							<small>Al envíar esta forma manifiesta su conformidad con el aviso de privacidad. Para más información, lea nuestro 
+        							<a th:href="@{'/assets/src/jayor/jayor-privacy.pdf'}" target="_blank" style="text-decoration: underline;">aviso de privacidad.</a></small>
+        						</p>
+        					</div>
+        				</div>
+        			</div>
+        		</row>
+      		</div>
+    	</div>
+  	</div>
+</div>

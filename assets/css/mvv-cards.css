@@ -1,0 +1,70 @@
+/* Mission, Vision, Values Cards */
+.mvv-card {
+    height: 300px;
+    padding: 35px 10px;
+    transition: transform 0.3s ease;
+}
+.mvv-card:hover {
+    /*transform: translateY(-5px);*/
+    background-color: #003DA6;
+    color: white;
+}
+.mvv-card:hover p {
+    font-size: 0.75rem;
+}
+.mvv-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+.mvv-card-mission,
+.mvv-card-vision,
+.mvv-card-values {
+    background-color: #EFF1F5;
+    border: 1px solid #1D1D1B;
+}
+.mvv-card-values li {
+    margin-bottom: 5px;
+}
+.mvv-icon {
+    position: relative;
+    margin-bottom: 30px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mvv-icon-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.mvv-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #000000;
+}
+@media (min-width: 768px) {
+    .mvv-card {
+        height: 350px;
+        padding: 50px 30px;
+    }
+    .mvv-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    .mvv-icon-img {
+        width: 100%;
+        height: auto;
+    }
+    .mvv-title {
+        font-size: 28px;
+    }
+}

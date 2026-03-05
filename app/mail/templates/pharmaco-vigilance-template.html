@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<title>Reporte de Farmacovigilancia</title>
+		<!-- use the font -->
+	    <style>
+	        body {{
+	            font-family: 'Roboto', sans-serif;
+	            font-size: 12px;
+	        }}
+	    </style>
+	</head>
+	<body style="margin: 0; padding: 0;">
+	<table style="border: 0; width: 600px; padding: 0; border-collapse: collapse;">
+			<thead></thead>
+			<tbody>
+				<tr style="margin-top: 10px; margin-bottom: 30px;">
+					<td>
+						<span><b>Reporte de Farmacovigilancia</b></span>
+					</td>
+				</tr>
+				<tr style="display: {{display}};">
+					<td style="background-color: #dc3545; padding: 40px 0 30px 0;">
+						<span style="font-weight: bold; color: #ffffff; font-size:16px;">Mensaje de ¡ALTA PRIORIDAD!</span>
+					</td>
+				</tr>
+				<tr style="margin-top: 10px;">
+					<td style="background-color: #eaeaea; padding: 10px 30px 20px;">
+						<p><b><span style="text-decoration: underline;">Datos Personales</span></b></p>
+						<ul>
+							<li>
+								<span><b>Nombre: </b><span>{{name}}</span></span>
+							</li>
+							<li>
+								<span><b>Apellido Paterno: </b><span>{{plName}}</span></span>
+							</li>
+							<li>
+								<span><b>Apellido Materno: </b><span>{{mlName}}</span></span>
+							</li>
+							<li>
+								<span><b>Teléfono: </b><span>{{phone}}</span></span>
+							</li>
+							<li>
+								<span><b>Correo: </b><span>{{email}}</span></span>
+							</li>
+							<li>
+								<span><b>Tipo de persona: </b><span>{{personType}}</span></span>
+							</li>
+						</ul>
+						<p><b><span style="text-decoration: underline;">Datos del producto</span></b></p>
+						<ul>
+							<li>
+								<span><b>Producto: </b><span>{{product}}</span></span>
+							</li>
+							<li>	
+								<span><b>Caducidad: </b><span>{{dueDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Lote No.: </b><span>{{lote}}</span></span>
+							</li>
+							<li>
+								<span><b>Nombre genérico: </b><span>{{genericName}}</span></span>
+							</li>
+							<li>
+								<span><b>Dosis: </b><span>{{dose}}</span></span>
+							</li>
+							<li>
+								<span><b>Vía de administración: </b><span>{{admWay}}</span></span>
+							</li>
+							<li>
+								<span><b>Marca: </b><span>{{brand}}</span></span>
+							</li>
+							<li>	
+								<span><b>Registro Sanitario: </b><span>{{healthRegister}}</span></span>
+							</li>
+							<li>
+								<span><b>Continúa usando el producto: </b><span>{{productUse}}</span></span>
+							</li>
+							<li>
+								<span><b>Fecha Inicio de uso: </b><span>{{startDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Fecha Término: </b><span>{{endDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Razones por las que usa este producto: </b></span><br /><span>{{reasonUse}}</span>
+							</li>
+							<li>
+								<span><b>Se encuentra utilizando algún otro medicamento y/o dispositivo médico:</b></span><br /><span>{{otherDrug}}</span>
+							</li>
+						</ul>
+						<p><b><span style="text-decoration: underline;">Descripción del evento</span></b></p>
+						<ul>
+							<li>
+								<span><b>Qué le ocurrió cuando uso el producto:</b></span><br /><span>{{eventHappened}}</span>
+							</li>
+							<li>
+								<span><b>Fecha Inicio del evento: </b><span>{{eventStartDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Fecha Término: </b><span>{{eventEndDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Continúa usando el producto: </b><span>{{eventUse}}</span></span>
+							</li>
+							<li>
+								<span><b>Tipo de evento: </b><span>{{eventType}}</span></span>
+							</li>
+						</ul>
+						<p><b><span style="text-decoration: underline;">Datos del paciente</span></b></p>
+						<ul>
+							<li>
+								<span><b>Nombre: </b><span>{{patName}}</span></span>
+							</li>
+							<li>
+								<span><b>Apellido Paterno: </b><span>{{patPlName}}</span></span>
+							</li>
+							<li>
+								<span><b>Apellido Materno: </b><span>{{patMlName}}</span></span>
+							</li>
+							<li>
+								<span><b>Género: </b><span>{{gender}}</span></span>
+							</li>
+							<li>
+								<span><b>Fecha de Nacimiento: </b><span>{{birthDate}}</span></span>
+							</li>
+							<li>
+								<span><b>Embarazo: </b><span>{{pregnancy}}</span></span>
+							</li>
+							<li>
+								<span><b>Estatura: </b><span>{{height}}</span></span>
+							</li>
+							<li>
+								<span><b>Peso: </b><span>{{weight}}</span></span>
+							</li>
+							<li>
+								<span><b>Recetado por el médico: </b><span>{{doctorPrescribe}}</span></span>
+							</li>
+							<li>
+								<span><b>Teléfono: </b><span>{{patPhone}}</span></span>
+							</li>
+							<li>
+								<span><b>Correo: </b><span>{{patEmail}}</span></span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot style="font-size: 10px;"></tfoot>
+		</table>
+	</body>
+</html>

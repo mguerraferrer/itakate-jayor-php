@@ -1,0 +1,11 @@
+.vacancy-media {
+    height: 150px;
+    text-align: center;
+}
+.vacancy-media a {
+    color: var(--bs-body-color);
+    font-weight: bolder;
+}
+.vacancy-media .product-cart-btn a {
+    color: #FFFFFF;
+}

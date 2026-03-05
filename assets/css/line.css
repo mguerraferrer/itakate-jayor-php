@@ -1,0 +1,131 @@
+.line-card-adh {
+    border: 1px solid #E50695;
+}
+.product-card-1 .line-card-image-adh {
+    border-bottom: 1px solid #E50695;
+}
+.line-card-info-adh {
+    background-color: #E50695;
+}
+.line-card-sur {
+    border: 1px solid #AA182C;
+}
+.product-card-1 .line-card-image-sur {
+    border-bottom: 1px solid #AA182C;
+}
+.line-card-info-sur {
+    background-color: #AA182C;
+}
+.line-card-gas {
+    border: 1px solid #FF8672;
+}
+.product-card-1 .line-card-image-gas {
+    border-bottom: 1px solid #FF8672;
+}
+.line-card-info-gas {
+    background-color: #FF8672;
+}
+.line-card-gyn {
+    border: 1px solid #C028B9;
+}
+.product-card-1 .line-card-image-gyn {
+    border-bottom: 1px solid #C028B9;
+}
+.line-card-info-gyn {
+    background-color: #C028B9;
+}
+.line-card-hyp {
+    border: 1px solid #61A60E;
+}
+.product-card-1 .line-card-image-hyp {
+    border-bottom: 1px solid #61A60E;
+}
+.line-card-info-hyp {
+    background-color: #61A60E;
+}
+.line-card-inf {
+    border: 1px solid #0033A1;
+}
+.product-card-1 .line-card-image-inf {
+    border-bottom: 1px solid #0033A1;
+}
+.line-card-info-inf {
+    background-color: #0033A1;
+}
+.line-card-med {
+    border: 1px solid #009579;
+}
+.product-card-1 .line-card-image-med {
+    border-bottom: 1px solid #009579;
+}
+.line-card-info-med {
+    background-color: #009579;
+}
+.line-card-ort {
+    border: 1px solid #A25230;
+}
+.product-card-1 .line-card-image-ort {
+    border-bottom: 1px solid #A25230;
+}
+.line-card-info-ort {
+    background-color: #A25230;
+}
+.line-card-res {
+    border: 1px solid #009FE3;
+}
+.product-card-1 .line-card-image-res {
+    border-bottom: 1px solid #009FE3;
+}
+.line-card-info-res {
+    background-color: #009FE3;
+}
+.line-card-the {
+    border: 1px solid #706F6F;
+}
+.product-card-1 .line-card-image-the {
+    border-bottom: 1px solid #706F6F;
+}
+.line-card-info-the {
+    background-color: #706F6F;
+}
+.line-card-uro {
+    border: 1px solid #FF9E18;
+}
+.product-card-1 .line-card-image-uro {
+    border-bottom: 1px solid #FF9E18;
+}
+.line-card-info-uro {
+    background-color: #FF9E18;
+}
+.line-card-pha {
+    border: 1px solid #E1251B;
+}
+.product-card-1 .line-card-image-pha {
+    border-bottom: 1px solid #E1251B;
+}
+.line-card-info-pha {
+    background-color: #E1251B;
+}
+.line-card-own {
+    border: 1px solid #19D3C5;
+}
+.product-card-1 .line-card-image-own {
+    border-bottom: 1px solid #19D3C5;
+}
+.line-card-info-own {
+    background-color: #19D3C5;
+}
+.line-card-info {
+    min-height: 110px;
+}
+.line-media img {
+    width: 30px;
+}
+.line-title {
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.line-title a,
+.line-title a:hover {
+    color: #FFFFFF;
+}

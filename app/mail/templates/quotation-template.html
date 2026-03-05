@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<title>Jayor - Solicitud de cotización</title>
+		<style>
+			body {
+				font-family: 'Roboto', sans-serif;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body style="margin: 0; padding: 0;">
+		<table style="border: 0; width: 600px; padding: 0; border-collapse: collapse;">
+			<thead></thead>
+			<tbody>
+			<tr style="margin-top: 10px; margin-bottom: 30px; display: {{display}};">
+				<td>
+					<span style="font-size: 14px;">Gracias por tu solicitud. En breve te daremos respuesta.</span>
+				</td>
+			</tr>
+			<tr style="margin-top: 10px;">
+				<td style="background-color: #eaeaea; padding: 10px 30px 20px;">
+					<p><b><span style="text-decoration: underline;">Detalles de la cotización</span></b></p>
+					<ul>
+						<li><span><b>Folio:</b> <span>{{folio}}</span></span></li>
+					</ul>
+
+					<p><b><span style="text-decoration: underline;">Datos Personales</span></b></p>
+					<ul>
+						<li><span><b>Nombre:</b> <span>{{name}}</span></span></li>
+						<li><span><b>Razón social:</b> <span>{{businessName}}</span></span></li>
+						<li><span><b>RFC:</b> <span>{{rfc}}</span></span></li>
+						<li><span><b>Tipo de uso:</b> <span>{{productUse}}</span></span></li>
+						<li><span><b>Calle:</b> <span>{{street}}</span></span></li>
+						<li><span><b>No. exterior:</b> <span>{{outsideNumber}}</span></span></li>
+						<li><span><b>No. interior:</b> <span>{{insideNumber}}</span></span></li>
+						<li><span><b>Colonia:</b> <span>{{colony}}</span></span></li>
+						<li><span><b>Estado:</b> <span>{{state}}</span></span></li>
+						<li><span><b>País:</b> <span>{{country}}</span></span></li>
+						<li><span><b>C.P.:</b> <span>{{zipcode}}</span></span></li>
+						<li><span><b>E-mail:</b> <span>{{email}}</span></span></li>
+						<li><span><b>Teléfono:</b> <span>{{phone}}</span></span></li>
+						<li><span><b>Celular:</b> <span>{{cell}}</span></span></li>
+						<li><span><b>Comentarios:</b><br /><span>{{comments}}</span></span></li>
+					</ul>
+
+					<p><b><span style="text-decoration: underline;">Productos</span></b></p>
+					{{products_html}}
+				</td>
+			</tr>
+			</tbody>
+			<tfoot style="font-size: 10px;"></tfoot>
+		</table>
+	</body>
+</html>
