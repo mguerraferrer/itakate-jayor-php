@@ -292,7 +292,7 @@
                                                 <p>
                                                     <small>
                                                         Por favor llena la mayor cantidad posible de datos, si tienes duda de qué elementos colocar de
-                                                        <a href="../../assets/src/pharma/pharmaco-vigilance-example.pdf" target="_blank">clic aquí</a>.
+                                                        <a href="../../assets/src/pharma/esquema_dispositivo_medicamento.pdf" target="_blank">clic aquí</a>.
                                                     </small>
                                                 </p>
                                                 <div class="row g-3">
