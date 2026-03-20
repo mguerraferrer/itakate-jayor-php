@@ -45,6 +45,7 @@ class ProductInfo {
     private bool $topTen = false;
     private ?int $topTenOrder = null;
     private bool $outlet = false;
+    private bool $inStock = true;
     
     // Computed details
     private ?string $details = null;
@@ -97,7 +98,8 @@ class ProductInfo {
         $dto->setTopTen(!empty($product['top_ten']));
         $dto->setTopTenOrder($product['top_ten_order'] ?? null);
         $dto->setOutlet(!empty($product['outlet']));
-        
+        $dto->setInStock(!empty($product['in_stock']));
+
         // Build product details string
         $dto->setDetails(self::productDetails($product));
         
@@ -212,6 +214,7 @@ class ProductInfo {
             'topTen' => $this->topTen,
             'topTenOrder' => $this->topTenOrder,
             'outlet' => $this->outlet,
+            'inStock' => $this->inStock,
             'details' => $this->details
         ];
     }
@@ -306,6 +309,9 @@ class ProductInfo {
     
     public function isOutlet(): bool { return $this->outlet; }
     public function setOutlet(bool $outlet): void { $this->outlet = $outlet; }
+
+    public function isInStock(): bool { return $this->inStock; }
+    public function setInStock(bool $inStock): void { $this->inStock = $inStock; }
     
     public function getDetails(): ?string { return $this->details; }
     public function setDetails(?string $details): void { $this->details = $details; }

@@ -323,3 +323,7 @@ a.jy-link {
     font-size: 0.875em;
     color: var(--bs-form-invalid-color);
 }
+
+.badge {
+    border-radius: 0.25rem;
+}

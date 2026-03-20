@@ -125,6 +125,7 @@ class ProductWebService extends BaseDAO {
                 p.top_ten,
                 p.top_ten_order,
                 p.outlet,
+                p.in_stock,
                 COUNT(DISTINCT pd.id) > 0 as has_details
             ';
         $joins = [

@@ -13,6 +13,7 @@ class ProductViewDetail {
     private bool $topTen;
     private ?int $topTenOrder;
     private bool $outlet;
+    private bool $inStock;
     private array $products; // Array of ProductInfo objects
 
     /**
@@ -35,6 +36,7 @@ class ProductViewDetail {
             $this->topTen = $firstProduct->isTopTen();
             $this->topTenOrder = $firstProduct->getTopTenOrder();
             $this->outlet = $firstProduct->isOutlet();
+            $this->inStock = $firstProduct->isInStock();
         } else {
             // Fallback for arrays (backwards compatibility)
             $this->sku = $firstProduct['sku'] ?? '';
@@ -42,6 +44,7 @@ class ProductViewDetail {
             $this->topTen = (bool)($firstProduct['top_ten'] ?? false);
             $this->topTenOrder = $firstProduct['top_ten_order'] ?? null;
             $this->outlet = (bool)($firstProduct['outlet'] ?? false);
+            $this->inStock = (bool)($firstProduct['in_stock'] ?? false);
         }
         
         $this->products = $products;
@@ -82,6 +85,10 @@ class ProductViewDetail {
         return $this->outlet;
     }
 
+    public function isInStock(): bool {
+        return $this->inStock;
+    }
+
     /**
      * Get products list
      */
@@ -107,6 +114,7 @@ class ProductViewDetail {
             'topTen' => $this->topTen,
             'topTenOrder' => $this->topTenOrder,
             'outlet' => $this->outlet,
+            'in_stock' => $this->inStock,
             'products' => $productsArray
         ];
     }

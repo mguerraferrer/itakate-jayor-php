@@ -98,7 +98,12 @@
                                         <?php foreach ($productDetail['products'] as $product): ?>
                                         <div class="row g-2 g-md-3 product-detail-container pb-3 mb-3">
                                             <div class="col-12 col-md-8 product-detail-info">
-                                                <span><?php echo htmlspecialchars($product['details'] ?? 'Sin descripción'); ?></span>
+                                                <div class="d-flex flex-column">
+                                                    <span><?php echo htmlspecialchars($product['details'] ?? 'Sin descripción'); ?></span>
+                                                    <?php if (!$product['inStock']): ?>
+                                                        <span class="badge text-bg-danger mt-1">Producto agotado</span>
+                                                    <?php endif; ?>
+                                                </div>
                                             </div>
                                             <div class="col-12 col-md-4 text-end">
                                                 <?php

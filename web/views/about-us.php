@@ -1,7 +1,7 @@
 <?php
     require_once __DIR__ . '/../template/quotation-session-init.php';
 
-    $title = 'Ligas - Soccer League';
+    $title = 'Laboratorio Jayor - Nuestro ADN';
     $headlineTitle = 'Nuestro ADN';
 ?>
 <!doctype html>
