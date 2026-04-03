@@ -115,11 +115,12 @@ class ProductInfo {
     private static function productDetails(array $product): string {
         $details = [];
         
-        // By default, the product's brand is added
+        /*// By default, the product's brand is added
         $brandName = $product['brand_name'] ?? null;
         if (!empty($brandName)) {
             $details[] = $brandName;
-        }
+        }*/
+        $details[] = $product['sku'] ?? null;
         
         // Get product details from database (assuming they are stored in a field or related table)
         // If product doesn't have specific details, only sales factor is added

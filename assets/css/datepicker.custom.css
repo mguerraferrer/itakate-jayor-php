@@ -1,0 +1,17 @@
+.datepicker-header .datepicker-controls .button,
+.datepicker-footer .datepicker-controls .button {
+    border-color: transparent !important;
+    background-color: transparent;
+    font-weight: 700;
+}
+.datepicker-controls .button:focus, .datepicker-controls .button:hover {
+    background-color: #e2e6ea;
+    border-color: #dbe0e5;
+    color: #000;
+}
+.datepicker-footer .datepicker-controls .button {
+    border-radius: .25rem;
+    flex: auto;
+    font-size: .875rem;
+    margin: calc(.375rem - 1px) .375rem;
+}

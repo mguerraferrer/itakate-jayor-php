@@ -87,8 +87,9 @@ class BaseDAO {
                     throw new InvalidArgumentException("BETWEEN requires an array with two values for $key");
                 }
 
-                $paramKey1 = ":btw_min_$field";
-                $paramKey2 = ":btw_max_$field";
+                $cleanField = preg_replace('/[^a-zA-Z0-9_]/', '_', $field);
+                $paramKey1 = ":btw_min_$cleanField";
+                $paramKey2 = ":btw_max_$cleanField";
 
                 $where[] = "$field BETWEEN $paramKey1 AND $paramKey2";
                 $params[$paramKey1] = $value[0];
@@ -140,6 +141,50 @@ class BaseDAO {
             $sql .= " GROUP BY {$data->groupBy}";
         }
 
+        // HAVING
+        if (!empty($data->having)) {
+            $havingClauses = [];
+            foreach ($data->having as $key => $value) {
+                // Case 1: simple equality (no spaces, no parentheses, no :placeholder)
+                if (!str_contains($key, ' ') && !str_contains($key, '(') && !str_contains($key, ':')) {
+                    $cleanKey = preg_replace('/[^a-zA-Z0-9_]/', '_', $key);
+                    $paramKey = ":having_eq_" . $cleanKey;
+                    $havingClauses[] = "$key = $paramKey";
+                    $params[$paramKey] = $value;
+                    continue;
+                }
+
+                // Case 2: simple operator (e.g. 'total >', 'count LIKE') - regex for field + operator
+                if (preg_match('/^([a-zA-Z0-9_.]+)\s+([<>=!]+|LIKE|NOT LIKE)$/i', $key, $matches)) {
+                    $field = trim($matches[1]);
+                    $operator = strtoupper(trim($matches[2]));
+
+                    $allowed = ['=', '!=', '<>', '<', '>', '<=', '>=', 'LIKE', 'NOT LIKE'];
+                    if (!in_array($operator, $allowed)) {
+                        throw new InvalidArgumentException("Unsupported operator in HAVING: $operator in $key");
+                    }
+
+                    $opClean = str_replace(['!', '<', '>', '=', ' '], '', $operator);
+                    $cleanField = preg_replace('/[^a-zA-Z0-9_]/', '_', $field);
+                    $paramKey = ":having_{$opClean}_{$cleanField}";
+
+                    $havingClauses[] = "$field $operator $paramKey";
+                    $params[$paramKey] = $value;
+                    continue;
+                }
+
+                // Fallback: treat as equality
+                $cleanKey = preg_replace('/[^a-zA-Z0-9_]/', '_', $key);
+                $paramKey = ":having_eq_" . $cleanKey;
+                $havingClauses[] = "$key = $paramKey";
+                $params[$paramKey] = $value;
+            }
+
+            if (!empty($havingClauses)) {
+                $sql .= " HAVING " . implode(' AND ', $havingClauses);
+            }
+        }
+
         // ORDER BY
         if (!empty($data->orderBy)) {
             $sql .= " ORDER BY {$data->orderBy}";
@@ -161,7 +206,7 @@ class BaseDAO {
                 $stmt->bindValue(':limit', $data->limit, PDO::PARAM_INT);
                 $stmt->bindValue(':offset', $data->offset, PDO::PARAM_INT);
             }
-
+            
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {

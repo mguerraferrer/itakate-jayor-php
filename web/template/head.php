@@ -34,6 +34,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $rootPath; ?>assets/vendor/iziToast/iziToast.min.css">
 <!-- iziToast Custom CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo $rootPath; ?>assets/css/izitoast.custom.css">
+<!-- Font Awesome 6 CSS -->
+<link rel="stylesheet" type="text/css" href="<?php echo $rootPath; ?>assets/css/all.min.css">
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo $rootPath; ?>assets/theme/css/style.css">
 <!-- Custom CSS -->

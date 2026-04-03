@@ -18,8 +18,7 @@
 <html lang="es-MX">
     <head>
         <?php include '../template/head.php'; ?>
-        <!-- Bootstrap Datepicker -->
-        <!--<link rel="stylesheet" href="../../assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css">-->
+        <!-- Bootstrap Datepicker -->        
         <link rel="stylesheet" href="../../assets/vendor/datepicker/datepicker-bs5.min.css">
         <!-- Pharma CSS -->
         <link rel="stylesheet" href="../../assets/css/pharma.css"/>

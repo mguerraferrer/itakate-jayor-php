@@ -1,7 +1,7 @@
 'use strict';
 
 const FORM_ID = 'checkoutForm';
-const AJAX_URL = `${rootPath}app/ajax/web/quotation-checkout.php`;
+const CHECKOUT_AJAX_URL = `${rootPath}app/ajax/web/quotation-checkout.php`;
 
 const checkout = () => {
     try {
@@ -20,7 +20,7 @@ const checkout = () => {
         formData.append('products', JSON.stringify(products));
 
         setTimeout(() => {
-            axios.post(AJAX_URL, formData)
+            axios.post(CHECKOUT_AJAX_URL, formData)
                 .then(response => {
                     if (response.data.success) {
                         const folio = response.data.folio;

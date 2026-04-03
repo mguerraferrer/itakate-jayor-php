@@ -8,9 +8,11 @@ require_once __DIR__ . '/../../../autoload.php';
 class QuotationItemWebService extends BaseDAO {
 
     use QueryTrait;
+    private DashboardQuotationItemService $dashboardQuotationItemService;
 
     public function __construct() {
         parent::__construct();
+        $this->dashboardQuotationItemService = new DashboardQuotationItemService();
         $this->table = 'quotation_items';
     }
 
@@ -22,6 +24,7 @@ class QuotationItemWebService extends BaseDAO {
      * @return void
      */
     public function saveQuotationItems(int $quotationId, array $items): void {
+        $itemIds = [];
         foreach ($items as $item) {
             if ($item instanceof QuotationItemInfo) {
                 $quotationItemData = [
@@ -30,8 +33,11 @@ class QuotationItemWebService extends BaseDAO {
                     'quantity' => $item->getQuantity()
                 ];
                 parent::insert($quotationItemData);
+                $itemIds[] = $item->getId();
             }
         }
+        // Save quotations items to the dashboard
+        $this->dashboardQuotationItemService->saveQuotationItems($itemIds);
     }
 
 }

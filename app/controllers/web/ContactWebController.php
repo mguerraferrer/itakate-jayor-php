@@ -7,9 +7,11 @@ require_once __DIR__ . '/../../../autoload.php';
 class ContactWebController {
 
     private MailWebService $mailWebService;
+    private DashboardContactService $dashboardContactService;
 
     public function __construct() {
         $this->mailWebService = new MailWebService();
+        $this->dashboardContactService = new DashboardContactService();
     }
 
     /**
@@ -34,6 +36,11 @@ class ContactWebController {
             ];
 
             $sent = $this->mailWebService->sendContactEmail($cleanData);
+            // If email sent successfully, save the contact info to the database
+            if ($sent['success']) {
+                $this->dashboardContactService->saveContact($cleanData['name'], $cleanData['email']);
+            }
+
             $responseMessage = $sent['success']
                 ? 'Muchas gracias por contactarnos. En breve estaremos atendiendo tu solicitud'
                 : 'No se ha podido enviar el formulario de contacto. Por favor, intenta más tarde';

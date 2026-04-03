@@ -27,7 +27,8 @@ trait QueryTrait {
      * @param string $columns Columns to select
      * @param array $joins Join clauses
      * @param array $conditions WHERE conditions
-     * @param string $groupBy
+     * @param string $groupBy GROUP BY clause
+     * @param array $having HAVING conditions        
      * @param string $orderBy ORDER BY clause
      * @param int $limit LIMIT clause
      * @param int $offset OFFSET clause
@@ -39,6 +40,7 @@ trait QueryTrait {
         array  $joins = [],
         array  $conditions = [],
         string $groupBy = '',
+        array  $having = [],
         string $orderBy = '',
         int    $limit = -1,
         int    $offset = 0
@@ -49,6 +51,7 @@ trait QueryTrait {
             joins: $joins,
             conditions: $conditions,
             groupBy: $groupBy,
+            having: $having,
             orderBy: $this->sanitizeSort($orderBy),
             limit: $limit,
             offset: $offset

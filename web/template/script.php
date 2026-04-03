@@ -15,6 +15,8 @@
 <script src="<?php echo $rootPath; ?>assets/js/izitoast.util.js"></script>
 <!-- Utils Script -->
 <script src="<?php echo $rootPath; ?>assets/js/utils.js"></script>
+<!-- Social Network -->
+<script src="<?php echo $rootPath; ?>assets/js/social-network.js"></script>
 <script>
     // Pass rootPath and assetsPath to JS
     window.rootPath = '<?php echo addslashes($rootPath); ?>';

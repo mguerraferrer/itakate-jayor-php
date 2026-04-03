@@ -9,10 +9,14 @@ class QuotationCheckoutWebService extends BaseDAO {
 
     use QueryTrait;
     private QuotationItemWebService $quotationItemWebService;
+    private DashboardProductService $dashboardProductService;
+    private DashboardQuotationService $dashboardQuotationService;
 
     public function __construct() {
         parent::__construct();
         $this->quotationItemWebService = new QuotationItemWebService();
+        $this->dashboardProductService = new DashboardProductService();
+        $this->dashboardQuotationService = new DashboardQuotationService();
         $this->table = 'quotations';
     }
 
@@ -37,6 +41,12 @@ class QuotationCheckoutWebService extends BaseDAO {
         return '001';
     }
 
+    /**
+     * Get the creation date of a quotation by its folio
+     * 
+     * @param string $folio Quotation folio
+     * @return array|null Creation date of the quotation or null if not found
+     */
     public function getQuotationCreationDate($folio): ?array {
         $queryData = $this->createQueryData(
             columns: 'creation_date',
@@ -54,6 +64,11 @@ class QuotationCheckoutWebService extends BaseDAO {
     public function saveQuotation(array $quotationData, array $items): ?int {
         $quotationId = parent::insert($quotationData);
         $this->quotationItemWebService->saveQuotationItems($quotationId, $items);
+        // Save products to the dashboard
+        $this->dashboardProductService->saveProducts($quotationData, $items);
+        // Save quotation to the dashboard
+        $this->dashboardQuotationService->saveQuotation($quotationId);
+
         return $quotationId;
     }
 

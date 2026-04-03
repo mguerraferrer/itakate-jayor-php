@@ -27,16 +27,16 @@
                     </div>
                     <!-- Top social -->
                     <div class="nav header-social justify-content-end d-none d-lg-block white-link">
-                        <a class="h-social-link" href="https://www.facebook.com/laboratorios.jayor/" target="_blank">
+                        <a class="h-social-link" href="https://www.facebook.com/laboratorios.jayor/" target="_blank" data-rel="social-f">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/facebook-w.webp" title="" alt="Facebook Jayor">
                         </a>
-                        <a class="h-social-link" href="https://www.youtube.com/channel/UCwwarkvH0DBYBt87r3faHdw/videos" target="_blank">
+                        <a class="h-social-link" href="https://www.youtube.com/channel/UCwwarkvH0DBYBt87r3faHdw/videos" target="_blank" data-rel="social-y">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/youtube-w.webp" title="" alt="Youtube Jayor">
                         </a>
-                        <a class="h-social-link" href="https://www.linkedin.com/company/laboratorios-jayor/" target="_blank">
+                        <a class="h-social-link" href="https://www.linkedin.com/company/laboratorios-jayor/" target="_blank" data-rel="social-l">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/linkedin-w.webp" title="" alt="Linkedin Jayor">
                         </a>
-                        <a class="h-social-link" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" target="_blank">
+                        <a class="h-social-link" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" target="_blank" data-rel="social-w">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/whatsapp-w.webp" title="" alt="WhatsApp Jayor">
                         </a>
                     </div>

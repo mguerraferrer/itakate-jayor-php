@@ -7,9 +7,11 @@ require_once __DIR__ . '/../../../autoload.php';
 class PharmaWebController {
 
     private MailWebService $mailWebService;
+    private DashboardPharmaService $dashboardPharmaService;
 
     public function __construct() {
         $this->mailWebService = new MailWebService();
+        $this->dashboardPharmaService = new DashboardPharmaService();
     }
 
     public function validateStep(int $step, array $data): array {
@@ -67,20 +69,30 @@ class PharmaWebController {
             ];
 
             $sent = $this->mailWebService->sendPharmaReport($cleanData);
+            // If email sent successfully, save the report info to the database
+            if ($sent['success']) {
+                $this->dashboardPharmaService->savePharma(
+                    $cleanData['name'] . ' ' . $cleanData['plName'] . ' ' . $cleanData['mlName'],
+                    $cleanData['email'],
+                    $cleanData['phone'],
+                    $cleanData['personType']
+                );
+            }
+
             $mailSent = ['mailSent' => (bool) $sent['success']];
             $responseMessage = $sent['success']
                 ? 'Muchas gracias por enviar el reporte. En breve estaremos dándole seguimiento'
-                : 'No se ha podido enviar el formulario de contacto. Por favor, intenta más tarde';
+                : 'No se ha podido enviar el formulario de farmacovigilancia. Por favor, intenta más tarde';
             return $sent['success']
                 ? Response::success($responseMessage, $mailSent)
                 : Response::error($responseMessage);
         } catch (Exception $e) {
-            return Response::error('Error al enviar el formulario de contacto: ' . $e->getMessage());
+            return Response::error('Error al enviar el formulario de farmacovigilancia: ' . $e->getMessage());
         }
     }
 
     /**
-     * Validation rules for a contact message
+     * Validation rules for a pharmacovigilance report
      *
      * @return array Validation rules
      */

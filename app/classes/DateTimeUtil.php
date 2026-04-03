@@ -9,6 +9,36 @@ class DateTimeUtil {
     private const TIMEZONE = 'America/Mexico_City';
 
     /**
+     * Get current month name in Spanish
+     *
+     * @return string Current month name in Spanish
+     */
+    public static function getCurrentMonthNameInSpanish(): string {
+        $monthNames = [
+            1 => 'Enero', 2 => 'Febrero', 3 => 'Marzo', 4 => 'Abril',
+            5 => 'Mayo', 6 => 'Junio', 7 => 'Julio', 8 => 'Agosto',
+            9 => 'Septiembre', 10 => 'Octubre', 11 => 'Noviembre', 12 => 'Diciembre'
+        ];
+        $currentMonth = (int)self::now()->format('n');
+        return $monthNames[$currentMonth];
+    }
+
+    /**
+     * Get month name in Spanish by month number
+     *
+     * @param int $monthNumber Month number (1-12)
+     * @return string Month name in Spanish
+     */
+    public static function getMonthNameInSpanish(int $monthNumber): string {
+        $monthNames = [
+            1 => 'Enero', 2 => 'Febrero', 3 => 'Marzo', 4 => 'Abril',
+            5 => 'Mayo', 6 => 'Junio', 7 => 'Julio', 8 => 'Agosto',
+            9 => 'Septiembre', 10 => 'Octubre', 11 => 'Noviembre', 12 => 'Diciembre'
+        ];
+        return $monthNames[$monthNumber] ?? '';
+    }
+
+    /**
      * Gets current date/time in Mexico timezone
      *
      * @return DateTime Current date/time

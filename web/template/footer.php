@@ -38,16 +38,16 @@
                         </p>
                     </address>
                     <div class="nav dark-link fs-5">
-                        <a class="me-3 me-md-5 social" href="https://www.facebook.com/laboratorios.jayor/" target="_blank">
+                        <a class="me-3 me-md-5 social" href="https://www.facebook.com/laboratorios.jayor/" target="_blank" data-rel="social-f">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/facebook.webp" title="" alt="Facebook Jayor">
                         </a>
-                        <a class="me-3 me-md-5 social" href="https://www.youtube.com/channel/UCwwarkvH0DBYBt87r3faHdw/videos" target="_blank">
+                        <a class="me-3 me-md-5 social" href="https://www.youtube.com/channel/UCwwarkvH0DBYBt87r3faHdw/videos" target="_blank" data-rel="social-y">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/youtube.webp" title="" alt="Youtube Jayor">
                         </a>
-                        <a class="me-3 me-md-5 social" href="https://www.linkedin.com/company/laboratorios-jayor/" target="_blank">
+                        <a class="me-3 me-md-5 social" href="https://www.linkedin.com/company/laboratorios-jayor/" target="_blank" data-rel="social-l">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/linkedin.webp" title="" alt="Linkedin Jayor">
                         </a>
-                        <a class="me-3 me-md-5 social" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" target="_blank">
+                        <a class="me-3 me-md-5 social" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" target="_blank" data-rel="social-w">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/whatsapp.webp" title="" alt="WhatsApp Jayor">
                         </a>
                     </div>
@@ -69,7 +69,7 @@
     </div>
 </footer>
 <!-- WhatsApp Float Button -->
-<a href="https://api.whatsapp.com/message/454WIVFMWCYSG1" class="whatsapp-float-button" data-rel="social-W" target="_blank">
+<a href="https://api.whatsapp.com/message/454WIVFMWCYSG1" class="whatsapp-float-button" data-rel="social-w" target="_blank">
     <img src="<?php echo $assetsPath; ?>assets/src/social/whatsapp-float-btn.webp" title="" alt="WhatsApp Jayor">
 </a>
 <!-- End WhatsApp Float Button -->
