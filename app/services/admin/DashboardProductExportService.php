@@ -12,7 +12,7 @@ class DashboardProductExportService {
      * Generate XLSX file using Office Open XML format
      * 
      * @param array $products Product data
-     * @param string $reportType Type of report ('general' or 'monthly')
+     * @param string $reportType Type of report ('general', 'monthly', or 'view')
      * @param string $monthYear Month and year in format mm/yyyy (for monthly report)
      * @return void
      */
@@ -25,7 +25,8 @@ class DashboardProductExportService {
         // Add title header (row 1)
         $headerTitle = $reportType === 'general' 
             ? 'Top 10 General' 
-            : 'Top 10 Mensual: ' . $monthYear;
+            : ($reportType === 'monthly' ? 'Top 10 Mensual: ' . $monthYear : 'Top 10 Vistas');
+        $headerTotal = $reportType === 'view' ? 'Total de Vistas' : 'Cantidad (piezas)';
         
         $worksheet .= '<row r="1">';
         $worksheet .= '<c r="A1" t="inlineStr"><is><t>' . htmlspecialchars($headerTitle) . '</t></is></c>';
@@ -50,7 +51,7 @@ class DashboardProductExportService {
         $worksheet .= '<c r="B3" t="inlineStr"><is><t>Código</t></is></c>';
         $worksheet .= '<c r="C3" t="inlineStr"><is><t>Línea</t></is></c>';
         $worksheet .= '<c r="D3" t="inlineStr"><is><t>Marca</t></is></c>';
-        $worksheet .= '<c r="E3" t="inlineStr"><is><t>Cantidad (piezas)</t></is></c>';
+        $worksheet .= '<c r="E3" t="inlineStr"><is><t>' . htmlspecialchars($headerTotal) . '</t></is></c>';
         $worksheet .= '</row>';
 
         // Add product data (starting from row 4)
@@ -60,7 +61,7 @@ class DashboardProductExportService {
             $code = $product['code'] ?? '';
             $lineName = $product['line_name'] ?? '';
             $brandName = $product['brand_name'] ?? '';
-            $quantityTotal = $product['quantity_total'] ?? 0;
+            $quantityTotal = $reportType === 'view' ? $product['total'] ?? 0 : $product['quantity_total'] ?? 0;
             
             $worksheet .= '<row r="' . $rowNum . '">';
             $worksheet .= '<c r="A' . $rowNum . '" t="inlineStr"><is><t>' . htmlspecialchars($sku) . '</t></is></c>';
@@ -83,7 +84,9 @@ class DashboardProductExportService {
         file_put_contents($tempDir . '/xl/worksheets/sheet1.xml', $worksheet);
 
         // Create ZIP file
-        $suffix = $reportType === 'general' ? 'General-'  . $this->xlsxFileSuffix() : 'Mensual-' . $this->xlsxFileSuffix();
+        $suffix = $reportType === 'general' 
+            ? 'General-'  . $this->xlsxFileSuffix() 
+            : ($reportType === 'monthly' ? 'Mensual-' . $this->xlsxFileSuffix() : 'Vistas-' . $this->xlsxFileSuffix());
         $filename = 'Dashboard-Product-Top10-' . $suffix;
         $zip = new ZipArchive();
         $zipPath = sys_get_temp_dir() . '/' . $filename;

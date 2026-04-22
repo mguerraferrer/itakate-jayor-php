@@ -39,7 +39,7 @@
                                 </p>
                                 <div class="d-md-flex justify-content-md-between align-items-md-end pt-2">
                                     <div class="me-md-3 pb-2 pb-md-0">
-                                        <a class="btn btn-jy-ocean w-100" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor.pdf" target="_blank">
+                                        <a class="btn btn-jy-ocean w-100" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor.pdf" target="_blank" data-rel="catalog-download">
                                             Descargar catálogo
                                         </a>
                                     </div>
@@ -76,7 +76,7 @@
                                     <img src="<?php echo $assetsPath; ?>assets/src/home/item-13.webp" alt="Logo" class="home-slider-img-box-right">
                                 </div>
                                 <div class="pt-2">
-                                    <a class="btn btn-jy-green" href="<?php echo $assetsPath; ?>products?l=hyp">
+                                    <a class="btn btn-jy-green" href="<?php echo $viewsPath; ?>products?l=hyp">
                                         Descubre más
                                     </a>
                                 </div>

@@ -101,7 +101,7 @@
                 </div>
                 <!-- Cart -->
                 <div class="nav-item">
-                    <a class="nav-link" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor.pdf" target="_blank">
+                    <a class="nav-link" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor.pdf" target="_blank" data-rel="catalog-download">
                         <img class="h-icon" src="<?php echo $assetsPath; ?>assets/src/header/item-2.webp" title="Descargar catálogo" alt="">
                     </a>
                 </div>

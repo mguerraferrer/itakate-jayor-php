@@ -6,11 +6,13 @@ class ProductWebController {
     private ProductWebService $productWebService;
     private LineWebService $lineWebService;
     private BrandWebService $brandWebService;
+    private DashboardProductViewService $dashboardProductViewService;
 
     public function __construct() {
         $this->productWebService = new ProductWebService();
         $this->lineWebService = new LineWebService();
         $this->brandWebService = new BrandWebService();
+        $this->dashboardProductViewService = new DashboardProductViewService();
     }
 
     const LINE_CODE_DEFAULT = 'adh';
@@ -109,6 +111,12 @@ class ProductWebController {
             $result = $productDetail->toArray();
             $result['loadedBy'] = $loadedBy;
             $result['code'] = $code;
+
+            // Save product interaction to dashboard
+            $productId = $result['products'][0]['id'] ?? null;
+            if ($productId !== null) {
+                $this->dashboardProductViewService->saveProduct($productId);
+            }
 
             return $result;
         } catch (Exception $e) {

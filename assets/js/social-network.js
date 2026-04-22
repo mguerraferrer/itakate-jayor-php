@@ -1,9 +1,11 @@
 'use strict';
-const SOCIAL_AJAX_URL = '../../app/ajax/admin/dashboard_social.php';
 
+let SOCIAL_AJAX_URL = null;
 let social = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+    SOCIAL_AJAX_URL = (window.rootPath || '../../') + 'app/ajax/web/dashboard_social.php';
+    
     // Add event listeners to all social link elements
     const socialLinks = document.querySelectorAll('a[data-rel^="social-"]');
     

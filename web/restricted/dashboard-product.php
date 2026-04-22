@@ -39,6 +39,9 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#monthly-tab-pane" type="button" role="tab" aria-controls="monthly-tab-pane" aria-selected="false">Top 10 mensual</a>
                                             </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#view-tab-pane" type="button" role="tab" aria-controls="view-tab-pane" aria-selected="false">Top 10 vistos</a>
+                                            </li>
                                         </ul>
                                         <div class="tab-style-1 ixx-tab-style-3">                                            
                                             <div class="tab-content">
@@ -98,6 +101,30 @@
                                                     </div>
                                                     <div class="mt-3 text-end">
                                                         <a id="download-monthly-report" href="javascript:void(0)" class="btn btn-success d-none">
+                                                            <i class="fas fa-download"></i> <span>Descargar reporte</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="view-tab-pane" class="tab-pane fade in">
+                                                    <div class="table-responsive text-nowrap">
+                                                        <table id="productsTopTenViewTable" class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="5">Top 10 productos más vistos</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>SKU</th>
+                                                                    <th class="text-center">Código</th>
+                                                                    <th class="text-center">Línea</th>
+                                                                    <th class="text-center">Marca</th>
+                                                                    <th class="text-center">Vistas</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody></tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="mt-3 text-end">
+                                                        <a id="download-view-report" href="javascript:void(0)" class="btn btn-success d-none">
                                                             <i class="fas fa-download"></i> <span>Descargar reporte</span>
                                                         </a>
                                                     </div>

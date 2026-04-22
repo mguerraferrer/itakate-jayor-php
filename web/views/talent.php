@@ -77,7 +77,7 @@
                     <div class="container">
                         <div class="row" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                             <div class="col-12 text-center pb-5">
-                                <a href="https://walink.co/lj8ojo" target="_blank" class="btn btn-jy-primary">
+                                <a href="https://walink.co/lj8ojo" target="_blank" class="btn btn-jy-primary" id="talent-link">
                                     NUESTRAS VACANTES
                                 </a>
                             </div>

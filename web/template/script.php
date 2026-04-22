@@ -17,6 +17,10 @@
 <script src="<?php echo $rootPath; ?>assets/js/utils.js"></script>
 <!-- Social Network -->
 <script src="<?php echo $rootPath; ?>assets/js/social-network.js"></script>
+<!-- Catalog -->
+<script src="<?php echo $rootPath; ?>assets/js/catalog-download.js"></script>
+<!-- Talent -->
+<script src="<?php echo $rootPath; ?>assets/js/talent.js"></script>
 <script>
     // Pass rootPath and assetsPath to JS
     window.rootPath = '<?php echo addslashes($rootPath); ?>';

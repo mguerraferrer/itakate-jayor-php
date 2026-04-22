@@ -3,18 +3,16 @@ session_start();
 header('Content-Type: application/json');
 
 require_once __DIR__ . '/../../../autoload.php';
-include __DIR__ . '/access_verification.php';
 
 $controller = new DashboardSocialController();
 
-$action = $_GET['action'] ?? '';
+$action = $_POST['action'] ?? '';
 $response = [];
 
 switch ($action) {
-    case 'load_social':
-        $monthYear = $_GET['monthYear'] ?? '';
-        $initialLoad = $_GET['initialLoad'] ?? 0;
-        $response = $controller->getSocialNetworksCounts($monthYear, $initialLoad);
+    case 'register_social':
+        $social = $_POST['social'] ?? '';        
+        $response = $controller->saveSocial($social);
         break;
 
     default:

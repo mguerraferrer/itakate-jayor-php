@@ -8,10 +8,12 @@ class DashboardProductController {
 
     use DashboardTrait;
     private DashboardProductService $dashboardProductService;
+    private DashboardProductViewService $dashboardProductViewService;
     private DashboardProductExportService $exportService;
 
     public function __construct() {
         $this->dashboardProductService = new DashboardProductService();
+        $this->dashboardProductViewService = new DashboardProductViewService();
         $this->exportService = new DashboardProductExportService();
     }
 
@@ -27,9 +29,10 @@ class DashboardProductController {
             $topTen = [];
             if ($initialLoad === 1) {
                 $topTen['general'] = $this->dashboardProductService->getTop10General();
+                $topTen['view'] = $this->dashboardProductViewService->getTop10General();
             }
             
-            $topTen['monthly'] = $this->dashboardProductService->getTop10ByMonthYear($monthYear);            
+            $topTen['monthly'] = $this->dashboardProductService->getTop10ByMonthYear($monthYear);
             return Response::listSource($topTen);
         } catch (Exception $e) {
             return Response::error('Error al obtener los reportes de productos: ' . $e->getMessage());
@@ -55,6 +58,8 @@ class DashboardProductController {
                 } else {
                     $monthYear = DateTimeUtil::getCurrentMonthNameInSpanish() . " " . DateTimeUtil::now()->format('Y');
                 }                
+            } else if ($reportType === 'view') {
+                $data = $this->dashboardProductViewService->getTop10General();
             } else {
                 throw new Exception('Tipo de reporte no válido');
             }

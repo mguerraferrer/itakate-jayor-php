@@ -142,18 +142,19 @@
     CRE.CartQty = function() {
         $(".qty_btn").on("click", function() {
             var $button = $(this);
-            var oldQty = $button.parent().find(".cart-qty-input").val();
-            if ($button.text() === "+") {
-                var newQty = parseFloat(oldQty) + 1;
-            } else {
-                // Don't allow decrementing below zero
-                if (oldQty > 0) {
-                    var newQty = parseFloat(oldQty) - 1;
-                } else {
-                    newQty = 1;
-                }
+            var $input = $button.parent().find(".cart-qty-input");
+            var oldQty = parseFloat($input.val()) || 0; // Handle empty or non-numeric values
+            var newQty;
+            
+            if ($button.hasClass("dec")) {
+                // Increment quantity (dec class has up arrow icon)
+                newQty = oldQty + 1;
+            } else if ($button.hasClass("inc")) {
+                // Decrement quantity (inc class has down arrow icon)
+                newQty = Math.max(0, oldQty - 1);
             }
-            $button.parent().find(".cart-qty-input").val(newQty);
+            
+            $input.val(newQty);
         });
     }
 

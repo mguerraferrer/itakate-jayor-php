@@ -96,6 +96,32 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="col-md-4">
+                                <a href="dashboard-catalog-download" class="dashboard-a">
+                                    <div class="dashboard-box text-center">
+                                        <div class="dashboard-box-icon-container">
+                                            <div class="dashboard-box-icon">
+                                                <i class="fas fa-download"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="h6">Sección Descargas de Catálogo</h5>
+                                        <p>Dashboard administrativo de la sección de Descargas de Catálogo</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="dashboard-talent" class="dashboard-a">
+                                    <div class="dashboard-box text-center">
+                                        <div class="dashboard-box-icon-container">
+                                            <div class="dashboard-box-icon">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="h6">Sección Talento</h5>
+                                        <p>Dashboard administrativo de la sección de Talento</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>                       
                     </div>
                 </section>
