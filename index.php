@@ -17,6 +17,7 @@
 <html lang="es-MX">
     <head>
         <?php include 'web/template/head.php'; ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo $assetsPath; ?>/assets/css/index.css">
     </head>
     <body>
         <?php include 'web/fragments/mini-cart.php'; ?>
@@ -82,7 +83,20 @@
             <?php include 'web/template/footer.php'; ?>
             <!-- End Footer -->
         </div>
+
+        <div id="promoPopup" class="promo-popup" role="dialog" aria-modal="true" aria-label="Promocion Soccer League" hidden>
+            <div class="promo-popup__backdrop" data-popup-close="true"></div>
+            <div class="promo-popup__content" role="document">
+                <button type="button" class="promo-popup__close" id="promoPopupClose" aria-label="Cerrar promocion">&times;</button>
+                <img src="<?php echo $assetsPath; ?>assets/src/popup/diflosensi-popup.webp"
+                     alt="Promo Soccer League"
+                     class="promo-popup__image">
+            </div>
+        </div>
+
         <?php include 'web/template/script.php'; ?>
+        <!-- Index JS -->
+        <script src="<?php echo $assetsPath; ?>/assets/js/index.js"></script>
         <!-- Swiper carousel -->
         <script src="<?php echo $assetsPath; ?>/assets/vendor/swiper/swiper-bundle.min.js"></script>
     </body>
