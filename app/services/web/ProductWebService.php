@@ -34,7 +34,7 @@ class ProductWebService extends BaseDAO {
             columns: $columns,
             joins: self::COMMON_JOIN,
             conditions: $conditions,
-            orderBy: 'p.top_ten'
+            orderBy: 'p.top_ten_order ASC'
         );
         return parent::findAll($queryData);
     }

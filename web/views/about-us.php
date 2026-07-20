@@ -234,7 +234,7 @@
                                  data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                                 <div>
                                     <h3 class="mb-4 h5">
-                                        GPW 2025 <br>
+                                        GPW <br>
                                         Construyendo lugares de trabajo increíbles
                                     </h3>
                                     <p>
@@ -244,7 +244,7 @@
                                         confianza, la comunicación y el crecimiento profesional.
                                     </p>
                                     <p>
-                                        Obtener el distintivo GPW 2025 confirma que nuestro compromiso con el bienestar,
+                                        Obtener el distintivo GPW confirma que nuestro compromiso con el bienestar,
                                         el respeto y la integridad se vive todos los días, fortaleciendo relaciones y
                                         generando orgullo de pertenencia. Porque aquí, cada voz cuenta, cada talento suma y
                                         <b>juntos dejamos huella</b>, construyendo un lugar donde trabajar se convierte en motivo de inspiración.
@@ -265,7 +265,7 @@
                                  data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                                 <div>
                                     <h3 class="mb-4 h5">
-                                        ESR 2025 <br>
+                                        ESR <br>
                                         Responsabilidad que deja huella
                                     </h3>
                                     <p>
@@ -274,7 +274,7 @@
                                         comunidad, nuestro entorno y nuestra gente.
                                     </p>
                                     <p>
-                                        La obtención del distintivo ESR 2025 reafirma que nuestros esfuerzos en temas éticos,
+                                        La obtención del distintivo ESR reafirma que nuestros esfuerzos en temas éticos,
                                         sociales y ambientales están alineados con las mejores prácticas. Desde el respeto a
                                         los derechos humanos hasta la promoción del desarrollo sostenible, trabajamos para
                                         ser una empresa que no solo crece, sino que también suma.
