@@ -13,10 +13,6 @@
     $quotationData = $result['data']['quotation'] ?? [];
     $items = $quotationData['items'] ?? [];
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Cotizador';
     $headlineTitle = 'Cotizador';
 ?>

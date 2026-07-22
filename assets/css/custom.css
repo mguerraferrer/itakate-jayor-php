@@ -327,3 +327,26 @@ a.jy-link {
 .badge {
     border-radius: 0.25rem;
 }
+
+.pdf-container {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.qr-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 20px;
+}
+
+.qr-video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}

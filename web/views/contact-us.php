@@ -6,10 +6,6 @@
     $recaptchaWebService = new RecaptchaWebService();
     $siteKey = $recaptchaWebService->getSiteKey();
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Contacto';
     $headlineTitle = 'Contacto';
     $sectionTitle = 'Contacto';

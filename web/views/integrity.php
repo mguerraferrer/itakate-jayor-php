@@ -9,14 +9,6 @@
 <html lang="es-MX">
     <head>
         <?php include '../template/head.php'; ?>
-        <style>
-            .pdf-container {
-                width: 100%;
-                height: 600px;
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-            }
-        </style>
     </head>
     <body>
         <?php include '../fragments/mini-cart.php'; ?>

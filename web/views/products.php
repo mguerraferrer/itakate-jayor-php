@@ -14,10 +14,6 @@
     $lineActive = $productSource['lineActive'] ?? null;
     $brandActive = $productSource['brandActive'] ?? null;
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Productos';
     $headlineTitle = 'Productos';
 ?>

@@ -6,10 +6,6 @@
     $recaptchaWebService = new RecaptchaWebService();
     $siteKey = $recaptchaWebService->getSiteKey();
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Farma y tecno';
     $headlineTitle = 'Farma y tecno';
     $sectionTitle = 'Farmacovigilancia y Tecnovigilancia';

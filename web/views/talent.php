@@ -5,10 +5,6 @@
     $vacancyController = new VacancyWebController();
     $vacancies = $vacancyController->getActiveVacancies();
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Talento';
     $headlineTitle = 'Talento';
     $sectionTitle = 'Talento';

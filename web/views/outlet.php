@@ -5,10 +5,6 @@
     $productController = new ProductWebController();
     $outletProducts = $productController->getOutletProducts();
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Outlet Jayor';
     $headlineTitle = 'Outlet Jayor';
 ?>

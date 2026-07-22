@@ -17,11 +17,6 @@
     $recaptchaWebService = new RecaptchaWebService();
     $siteKey = $recaptchaWebService->getSiteKey();
 
-    // Define viewsPath for use in fragments
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Detalles de vacante';
     $headlineTitle = 'Talento';
     $sectionTitle = $vacancy['title'];

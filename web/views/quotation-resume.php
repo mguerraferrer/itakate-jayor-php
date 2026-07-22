@@ -53,10 +53,6 @@
         exit;
     }
 
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-
     $title = 'Laboratorio Jayor - Cotización Enviada';
     $headlineTitle = 'Cotizador';
 ?>

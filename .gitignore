@@ -1,2 +1,4 @@
 /.idea
 app/config/database.php
+/assets/src/media
+/assets/src/qrtmp

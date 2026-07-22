@@ -18,10 +18,6 @@
         $productDetail = $productController->loadByProductGroup($productGroup, $loadedBy, $code);
     }
     
-    if (!isset($viewsPath)) {
-        $viewsPath = '../views/';
-    }
-    
     $title = 'Laboratorio Jayor - Detalles del producto';
     $headlineTitle = 'Productos';
 ?>

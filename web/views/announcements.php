@@ -25,6 +25,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
+                                <img src="../../assets/src/announcements/alerta-sanitaria-03.webp" alt="Comunicado" class="img-fluid mb-4"/>
+                            </div>
+                            <div class="col-md-12 mt-5">
                                 <img src="../../assets/src/announcements/alerta-sanitaria-01.webp" alt="Comunicado" class="img-fluid mb-4"/>
                             </div>
                             <div class="col-md-12 mt-5">

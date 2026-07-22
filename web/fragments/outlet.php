@@ -35,7 +35,7 @@
                         <div class="product-card-info">
                             <h6 class="product-title fs-85">
                                 <a href="<?php echo $viewsPath; ?>product-detail?g=<?php echo htmlspecialchars($product['product_group']); ?>">
-                                    <?php echo htmlspecialchars($product['line_name']) . ' - ' . htmlspecialchars($product['sku']); ?>
+                                    <?php echo htmlspecialchars($product['sku']); ?>
                                 </a>
                             </h6>
                         </div>
