@@ -193,6 +193,16 @@ img.home-slider-img-box-left {
 img.home-slider-img-box-right {
 	max-width: 120px;
 }
+img.brand-logo,
+img.brand-logo-product {
+    width: 100%;    
+}
+img.brand-logo {
+    max-width: 150px;
+}
+img.brand-logo-product {
+    max-width: 200px;
+}
 @media (min-width: 576px) {
     .home-slider-badge img {
         width: 200px;

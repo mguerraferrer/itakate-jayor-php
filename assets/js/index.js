@@ -40,5 +40,5 @@ const setupPromoPopup = () => {
  * Initialization when the page loads
  */
 document.addEventListener('DOMContentLoaded', function () {
-    setupPromoPopup();
+    //setupPromoPopup();
 });

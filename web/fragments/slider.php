@@ -21,6 +21,57 @@
                 <img src="<?php echo $assetsPath; ?>assets/src/badge/jayor-great-place.webp" title="" alt="Great Place to Work">
             </div>
             <div class="bg-no-repeat bg-cover bg-center"
+                 style="background-image: url('<?php echo $assetsPath; ?>assets/src/home/item-14.webp');">
+                <div class="container">
+                    <div class="row min-vh-85 align-items-center py-12">
+                        <div class="col-lg-6 col-xl-5">
+                            <div class="p-5 bg-mode-re">
+                                <div class="row align-items-center gx-3 gy-4">
+                                    <div class="col-md-6 text-center text-md-start">
+                                        <img src="<?php echo $assetsPath; ?>assets/src/home/item-15.webp" class="img-fluid brand-logo mb-3" alt="Diflosensi" title="Diflosensi">
+                                        <img src="<?php echo $assetsPath; ?>assets/src/home/item-21.webp" class="img-fluid brand-logo-product mb-4" alt="Caja de Diflosensi" title="Caja de Diflosensi">
+                                        <a class="btn btn-danger text-uppercase fw-700 px-4 py-2" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" style="font-size: 0.8rem; letter-spacing: 0.02em;">
+                                            <small>Conoce m&aacute;s de la nueva "Dapa"</small>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex flex-column align-items-center justify-content-center ps-0 ps-md-5 h-100">
+                                            <p class="fw-600 text-muted fs-small mb-0">De venta en:</p>
+                                            <div class="mb-2">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-16.webp" class="img-fluid brand-logo" alt="Costco" title="Costco">
+                                            </div>
+                                            <div class="mb-2">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-17.webp" class="img-fluid brand-logo" alt="Soriana" title="Soriana">
+                                            </div>
+                                            <div class="mb-2">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-18.webp" class="img-fluid brand-logo" alt="La Comer" title="La Comer">
+                                            </div>
+                                            <div class="mb-2">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-19.webp" class="img-fluid brand-logo" alt="Walmart" title="Walmart">
+                                            </div>
+                                            <div class="mb-0">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-20.webp" class="img-fluid brand-logo" alt="Sam's Club" title="Sam's Club">
+                                            </div>
+                                            <p class="fw-600 text-muted fs-small mb-0">y en la farmacia de la esquina.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h4 class="text-white">
+                                    #MiVidaEnControl
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="gptg-badge" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <img src="<?php echo $assetsPath; ?>assets/src/badge/jayor-great-place.webp" title="" alt="Great Place to Work">
+            </div>
+            <div class="bg-no-repeat bg-cover bg-center"
                  style="background-image: url('<?php echo $assetsPath; ?>assets/src/home/item-1.webp');">
                 <div class="container">
                     <div class="row min-vh-85 align-items-center py-12">
