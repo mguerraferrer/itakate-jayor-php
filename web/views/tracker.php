@@ -29,7 +29,7 @@
                                 </h4>
                                 <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                                     <p class="mt-5 mb-0">
-                                        Para conocer el estatus de tu pedido, comunícate al <b>55 5319 6961</b> y selecciona la Opción 1.
+                                        Para conocer el estatus de tu pedido, comunícate al <b>55 4084 5298</b> y selecciona la Opción 1.
                                     </p>
                                     <p class="mb-0">
                                         Nuestro equipo te brindará la información actualizada de tu entrega.
@@ -49,7 +49,7 @@
                                     <h4>Rastree su Envío</h4>
                                     <div class="d-md-flex align-items-md-end">
                                         <div class="col-12 col-md-6 me-md-3 pb-5 pb-md-0">
-                                            <a class="btn btn-jy-ocean w-100" href="https://wa.link/f5x1p0" target="_blank">
+                                            <a class="btn btn-jy-ocean w-100" href="https://walink.co/brsgb9" target="_blank">
                                                 Escribe ahora
                                             </a>
                                         </div>
