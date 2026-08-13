@@ -114,18 +114,20 @@
                                                     }
                                                 ?>
 
-                                                <?php if (!$inQuotation): ?>
-                                                <a href="javascript:void(0)" 
-                                                   class="btn btn-jy-primary btn-sm w-100 btn-quotation add-to-quotation" 
-                                                   data-product-id="<?php echo htmlspecialchars($product['id']); ?>">
-                                                    Agregar al cotizador
-                                                </a>
-                                                <?php else: ?>
-                                                <a href="javascript:void(0)" 
-                                                   class="btn btn-primary btn-sm w-100 btn-quotation remove-from-quotation" 
-                                                   data-product-id="<?php echo htmlspecialchars($product['id']); ?>">
-                                                    Eliminar del cotizador
-                                                </a>
+                                                <?php if ($product['inStock']): ?>
+                                                    <?php if (!$inQuotation): ?>
+                                                    <a href="javascript:void(0)" 
+                                                    class="btn btn-jy-primary btn-sm w-100 btn-quotation add-to-quotation" 
+                                                    data-product-id="<?php echo htmlspecialchars($product['id']); ?>">
+                                                        Agregar al cotizador
+                                                    </a>
+                                                    <?php else: ?>
+                                                    <a href="javascript:void(0)" 
+                                                    class="btn btn-primary btn-sm w-100 btn-quotation remove-from-quotation" 
+                                                    data-product-id="<?php echo htmlspecialchars($product['id']); ?>">
+                                                        Eliminar del cotizador
+                                                    </a>
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
