@@ -36,6 +36,9 @@
                         <a class="h-social-link" href="https://www.linkedin.com/company/laboratorios-jayor/" target="_blank" data-rel="social-l">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/linkedin-w.webp" title="" alt="Linkedin Jayor">
                         </a>
+                        <a class="h-social-link" href="https://www.tiktok.com/@jayor.mx" target="_blank" data-rel="social-t">
+                            <img src="<?php echo $assetsPath; ?>assets/src/social/tiktok-w.webp" title="" alt="TikTok Jayor">
+                        </a>
                         <a class="h-social-link" href="https://api.whatsapp.com/message/454WIVFMWCYSG1" target="_blank" data-rel="social-w">
                             <img src="<?php echo $assetsPath; ?>assets/src/social/whatsapp-w.webp" title="" alt="WhatsApp Jayor">
                         </a>
