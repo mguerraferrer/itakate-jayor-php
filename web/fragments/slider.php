@@ -37,20 +37,29 @@
                                     <div class="col-md-6">
                                         <div class="d-flex flex-column align-items-center justify-content-center ps-0 ps-md-5 h-100">
                                             <p class="fw-600 text-muted fs-small mb-0">De venta en:</p>
-                                            <div class="mb-2">
+                                            <div class="mb-1">
                                                 <img src="<?php echo $assetsPath; ?>assets/src/home/item-16.webp" class="img-fluid brand-logo" alt="Costco" title="Costco">
                                             </div>
-                                            <div class="mb-2">
+                                            <div class="mb-1">
                                                 <img src="<?php echo $assetsPath; ?>assets/src/home/item-17.webp" class="img-fluid brand-logo" alt="Soriana" title="Soriana">
                                             </div>
-                                            <div class="mb-2">
+                                            <div class="mb-1">
                                                 <img src="<?php echo $assetsPath; ?>assets/src/home/item-18.webp" class="img-fluid brand-logo" alt="La Comer" title="La Comer">
                                             </div>
-                                            <div class="mb-2">
+                                            <div class="mb-1">
                                                 <img src="<?php echo $assetsPath; ?>assets/src/home/item-19.webp" class="img-fluid brand-logo" alt="Walmart" title="Walmart">
                                             </div>
-                                            <div class="mb-0">
+                                            <div class="mb-1">
                                                 <img src="<?php echo $assetsPath; ?>assets/src/home/item-20.webp" class="img-fluid brand-logo" alt="Sam's Club" title="Sam's Club">
+                                            </div>
+                                            <div class="mb-1">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-22.webp" class="img-fluid brand-logo" alt="Chedraui" title="Chedraui">
+                                            </div>
+                                            <div class="mb-1">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-23.webp" class="img-fluid brand-logo" alt="Farmacias del Ahorro" title="Farmacias del Ahorro">
+                                            </div>
+                                            <div class="mb-0">
+                                                <img src="<?php echo $assetsPath; ?>assets/src/home/item-24.webp" class="img-fluid brand-logo" alt="H-E-B" title="H-E-B">
                                             </div>
                                             <p class="fw-600 text-muted fs-small mb-0">y en la farmacia de la esquina.</p>
                                         </div>
