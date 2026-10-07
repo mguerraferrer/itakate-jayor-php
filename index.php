@@ -88,7 +88,7 @@
             <div class="promo-popup__backdrop" data-popup-close="true"></div>
             <div class="promo-popup__content" role="document">
                 <button type="button" class="promo-popup__close" id="promoPopupClose" aria-label="Cerrar promocion">&times;</button>
-                <img src="<?php echo $assetsPath; ?>assets/src/popup/diflosensi-popup.webp"
+                <img src="<?php echo $assetsPath; ?>assets/src/popup/pratzisen-popup.webp"
                      alt="Promo Soccer League"
                      class="promo-popup__image">
             </div>
