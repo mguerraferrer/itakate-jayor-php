@@ -99,7 +99,7 @@
                                 </p>
                                 <div class="d-md-flex justify-content-md-between align-items-md-end pt-2">
                                     <div class="me-md-3 pb-2 pb-md-0">
-                                        <a class="btn btn-jy-ocean w-100" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor.pdf" target="_blank" data-rel="catalog-download">
+                                        <a class="btn btn-jy-ocean w-100" href="<?php echo $assetsPath; ?>assets/src/catalogue/catalogo-jayor-261013.pdf" target="_blank" data-rel="catalog-download">
                                             Descargar catálogo
                                         </a>
                                     </div>
