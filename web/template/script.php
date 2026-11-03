@@ -19,6 +19,8 @@
 <script src="<?php echo $rootPath; ?>assets/js/social-network.js"></script>
 <!-- Catalog -->
 <script src="<?php echo $rootPath; ?>assets/js/catalog-download.js"></script>
+<!-- Health professional dialog -->
+<script src="<?php echo $rootPath; ?>assets/js/health-professional.js"></script>
 <!-- Talent -->
 <script src="<?php echo $rootPath; ?>assets/js/talent.js"></script>
 <script>
