@@ -1,6 +1,5 @@
 /* Mission, Vision, Values Cards - expandable panel */
 .mvv-item {
-    height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #EFF1F5;
@@ -76,28 +75,21 @@
     transform: rotate(180deg);
 }
 
-/* Panel: the box grows to fit the text */
+/* Panel: opens to the same height on every card (--mvv-open-h set by JS) */
 .mvv-panel {
-    display: grid;
-    grid-template-rows: 0fr;
+    height: 0;
+    overflow: hidden;
     opacity: 0;
-    transition: grid-template-rows 0.5s ease, opacity 0.4s ease;
+    transition: height 0.5s ease, opacity 0.4s ease;
 }
 .mvv-panel-inner {
-    overflow: hidden;
-    min-height: 0;
     text-align: left;
-    padding: 0 24px;
-    transition: padding 0.5s ease;
+    padding: 0 24px 28px;
 }
 .mvv-item:hover .mvv-panel,
 .mvv-item.open .mvv-panel {
-    grid-template-rows: 1fr;
+    height: var(--mvv-open-h, auto);
     opacity: 1;
-}
-.mvv-item:hover .mvv-panel-inner,
-.mvv-item.open .mvv-panel-inner {
-    padding: 0 24px 28px;
 }
 .mvv-panel-inner p {
     margin-bottom: 0.9rem;

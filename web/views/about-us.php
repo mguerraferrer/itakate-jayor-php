@@ -91,7 +91,7 @@
                 <section class="section pt-0">
                     <div class="row g-3 justify-content-center align-items-center">
                         <div class="col-12 col-md-6 ps-3 pe-3 ps-md-0 pe-md-0">
-                            <div class="row g-3 align-items-stretch">
+                            <div class="row g-3 align-items-start">
                                 <div class="col-12 col-md-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                                     <div class="mvv-item mvv-item-mission">
                                         <button type="button" class="mvv-card mvv-card-mission" aria-expanded="false" aria-controls="mvv-panel-mission">
@@ -291,7 +291,16 @@
             $(document).ready(function() {
                 setNavActive('header-nav-about-us');
 
-                // Mission / Vision / Values: expandable panels
+                // Mission / Vision / Values: expandable panels, all opening to the same height
+                function setMvvHeight() {
+                    var max = 0;
+                    $('.mvv-panel-inner').each(function() {
+                        max = Math.max(max, this.offsetHeight);
+                    });
+                    document.documentElement.style.setProperty('--mvv-open-h', max + 'px');
+                }
+                setMvvHeight();
+                $(window).on('load resize', setMvvHeight);
                 $('.mvv-card').on('click', function() {
                     var $item = $(this).closest('.mvv-item');
                     var open = !$item.hasClass('open');
