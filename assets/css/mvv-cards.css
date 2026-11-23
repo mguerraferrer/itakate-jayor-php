@@ -1,54 +1,121 @@
-/* Mission, Vision, Values Cards */
-.mvv-card {
-    height: 300px;
-    padding: 35px 10px;
-    transition: transform 0.3s ease;
+/* Mission, Vision, Values Cards - expandable panel */
+.mvv-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #EFF1F5;
+    border: 1px solid #1D1D1B;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-.mvv-card:hover {
-    /*transform: translateY(-5px);*/
+.mvv-item:hover,
+.mvv-item.open {
     background-color: #003DA6;
-    color: white;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 61, 166, 0.25);
 }
-.mvv-card:hover p {
-    font-size: 0.75rem;
-}
-.mvv-card-front {
+.mvv-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 35px 10px;
     text-align: center;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
 }
-.mvv-card-mission,
-.mvv-card-vision,
-.mvv-card-values {
-    background-color: #EFF1F5;
-    border: 1px solid #1D1D1B;
-}
-.mvv-card-values li {
-    margin-bottom: 5px;
+.mvv-card:focus-visible {
+    outline: 3px solid #003DA6;
+    outline-offset: -6px;
 }
 .mvv-icon {
-    position: relative;
-    margin-bottom: 30px;
     width: 80px;
     height: 80px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.mvv-icon-img {
+.mvv-icon img {
     width: 60px;
     height: 60px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.mvv-item:hover .mvv-icon img,
+.mvv-item.open .mvv-icon img {
+    transform: scale(1.1);
 }
 .mvv-title {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 3px;
     margin: 0;
-    color: #000000;
+    color: #000;
+    transition: color 0.3s ease;
+}
+.mvv-item:hover .mvv-title,
+.mvv-item.open .mvv-title {
+    color: #fff;
+}
+.mvv-chevron {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    margin-left: -6px;
+    font-size: 0.8rem;
+    transition: transform 0.4s ease;
+}
+.mvv-item:hover .mvv-chevron,
+.mvv-item.open .mvv-chevron {
+    transform: rotate(180deg);
+}
+
+/* Panel: the box grows to fit the text */
+.mvv-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.5s ease, opacity 0.4s ease;
+}
+.mvv-panel-inner {
+    overflow: hidden;
+    min-height: 0;
+    text-align: left;
+    padding: 0 24px;
+    transition: padding 0.5s ease;
+}
+.mvv-item:hover .mvv-panel,
+.mvv-item.open .mvv-panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+.mvv-item:hover .mvv-panel-inner,
+.mvv-item.open .mvv-panel-inner {
+    padding: 0 24px 28px;
+}
+.mvv-panel-inner p {
+    margin-bottom: 0.9rem;
+}
+.mvv-panel-inner p:last-child {
+    margin-bottom: 0;
+}
+.mvv-panel-title {
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.mvv-panel-inner ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+.mvv-panel-inner li {
+    margin-bottom: 5px;
 }
 @media (min-width: 768px) {
     .mvv-card {
@@ -60,11 +127,16 @@
         height: 100px;
         margin-bottom: 40px;
     }
-    .mvv-icon-img {
+    .mvv-icon img {
         width: 100%;
         height: auto;
     }
     .mvv-title {
         font-size: 28px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mvv-card, .mvv-panel, .mvv-panel-inner, .mvv-chevron, .mvv-icon img {
+        transition: none;
     }
 }

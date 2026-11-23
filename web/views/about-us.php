@@ -8,8 +8,7 @@
 <html lang="es-MX">
     <head>
         <?php include '../template/head.php'; ?>
-        <link rel="stylesheet" type="text/css" href="../../assets/css/flip-animation-hover.css">
-        <link rel="stylesheet" type="text/css" href="../../assets/css/mvv-cards.css">
+                <link rel="stylesheet" type="text/css" href="../../assets/css/mvv-cards.css">
     </head>
     <body>
         <?php include '../fragments/mini-cart.php'; ?>
@@ -92,110 +91,58 @@
                 <section class="section pt-0">
                     <div class="row g-3 justify-content-center align-items-center">
                         <div class="col-12 col-md-6 ps-3 pe-3 ps-md-0 pe-md-0">
-                            <div class="row g-3">
+                            <div class="row g-3 align-items-stretch">
                                 <div class="col-12 col-md-4" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                                    <div id="flip-1" class="flip-container mvv-card mvv-card-mission"
-                                         ontouchstart="this.classList.toggle('hover');" onclick="$('#flip-1').toggleClass('flip');">
-                                        <div class="flipper h-100">
-                                            <div class="front mvv-card-front w-100 h-100">
-                                                <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                                    <div class="mvv-icon">
-                                                        <img src="../../assets/src/aboutus/item-3.webp" alt="Misión" title="">
-                                                    </div>
-                                                    <h3 class="mvv-title">MISIÓN</h3>
-                                                    <div class="d-block d-sm-none mt-5">
-                                                        <p class="dp-text-yellow">
-                                                            <i class="fa fa-sync"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back w-100 h-100" style="padding: 40px 20px 40px 20px">
-                                                <div class="d-flex justify-content-center align-items-center h-100">
-                                                    <p class="text-start">
-                                                        MISIÓN DE NEGOCIO
-                                                        <br>
-                                                        La razón de existir nos une.
-                                                        <br><br>
-                                                        Ser un proveedor confiable de productos para la salud,
-                                                        ofreciendo excelente calidad, precios competitivos y un servicio
-                                                        sobresaliente tanto en el sector público como en el privado.
-                                                        <br><br>
-                                                        Estamos comprometidos con la salud y el bienestar de los
-                                                        consumidores, garantizando la disponibilidad, accesibilidad y
-                                                        eficacia de nuestros productos.
-                                                    </p>
-                                                </div>
+                                    <div class="mvv-item mvv-item-mission">
+                                        <button type="button" class="mvv-card mvv-card-mission" aria-expanded="false" aria-controls="mvv-panel-mission">
+                                            <span class="mvv-icon"><img src="../../assets/src/aboutus/item-3.webp" alt="Misión" title=""></span>
+                                            <h3 class="mvv-title">MISIÓN</h3>
+                                            <i class="fa fa-chevron-down mvv-chevron" aria-hidden="true"></i>
+                                        </button>
+                                        <div class="mvv-panel" id="mvv-panel-mission">
+                                            <div class="mvv-panel-inner">
+                                                <p class="mvv-panel-title">MISIÓN DE NEGOCIO</p>
+                                                <p>La razón de existir nos une.</p>
+                                                <p>Ser un proveedor confiable de productos para la salud, ofreciendo excelente calidad, precios competitivos y un servicio sobresaliente tanto en el sector público como en el privado.</p>
+                                                <p>Estamos comprometidos con la salud y el bienestar de los consumidores, garantizando la disponibilidad, accesibilidad y eficacia de nuestros productos.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                                    <div id="flip-3" class="flip-container mvv-card mvv-card-vision"
-                                         ontouchstart="this.classList.toggle('hover');" onclick="$('#flip-3').toggleClass('flip');">
-                                        <div class="flipper h-100">
-                                            <div class="front mvv-card-front w-100 h-100">
-                                                <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                                    <div class="mvv-icon">
-                                                        <img src="../../assets/src/aboutus/item-4.webp" alt="Visión" title="">
-                                                    </div>
-                                                    <h3 class="mvv-title">VISIÓN</h3>
-                                                    <div class="d-block d-sm-none mt-5">
-                                                        <p class="dp-text">
-                                                            <i class="fa fa-sync"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back w-100 h-100" style="padding: 40px 20px 40px 20px">
-                                                <div class="d-flex justify-content-center align-items-center h-100">
-                                                    <p class="text-start">
-                                                        VISIÓN DE NEGOCIO
-                                                        <br><br>
-                                                        Fortalecer la relación comercial y las ventas con nuestros
-                                                        clientes actuales mediante un portafolio de productos rentables,
-                                                        así como posicionar nuestras marcas con nuevos clientes de
-                                                        retail y cadenas de farmacias.
-                                                        <br><br>
-                                                        Nos encanta soñar,<br>
-                                                        ¡allá vamos!
-                                                    </p>
-                                                </div>
+                                    <div class="mvv-item mvv-item-vision">
+                                        <button type="button" class="mvv-card mvv-card-vision" aria-expanded="false" aria-controls="mvv-panel-vision">
+                                            <span class="mvv-icon"><img src="../../assets/src/aboutus/item-4.webp" alt="Visión" title=""></span>
+                                            <h3 class="mvv-title">VISIÓN</h3>
+                                            <i class="fa fa-chevron-down mvv-chevron" aria-hidden="true"></i>
+                                        </button>
+                                        <div class="mvv-panel" id="mvv-panel-vision">
+                                            <div class="mvv-panel-inner">
+                                                <p class="mvv-panel-title">VISIÓN DE NEGOCIO</p>
+                                                <p>Fortalecer la relación comercial y las ventas con nuestros clientes actuales mediante un portafolio de productos rentables, así como posicionar nuestras marcas con nuevos clientes de retail y cadenas de farmacias.</p>
+                                                <p>Nos encanta soñar,<br>¡allá vamos!</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-4" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                                    <div id="flip-4" class="flip-container mvv-card mvv-card-values"
-                                         ontouchstart="this.classList.toggle('hover');" onclick="$('#flip-4').toggleClass('flip');">
-                                        <div class="flipper h-100">
-                                            <div class="front mvv-card-front w-100 h-100">
-                                                <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                                    <div class="mvv-icon">
-                                                        <img src="../../assets/src/aboutus/item-5.webp" alt="Valores" title="">
-                                                    </div>
-                                                    <h3 class="mvv-title">VALORES</h3>
-                                                    <div class="d-block d-sm-none mt-5">
-                                                        <p class="dp-text">
-                                                            <i class="fa fa-sync"></i>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="back w-100 h-100">
-                                                <div class="d-flex justify-content-center align-items-center h-100">
-                                                    <p class="text-start">
-                                                        VALORES ORGANIZACIONALES
-                                                        <br><br>
-                                                        Cualidades que marcarán nuestro camino.
-                                                        <br><br>
-                                                        . Respeto<br>
-                                                        . Trabajo en equipo<br>
-                                                        . Ética<br>
-                                                        . Compromiso organizacional<br>
-                                                        . Orientación a resultados
-                                                    </p>
-                                                </div>
+                                    <div class="mvv-item mvv-item-values">
+                                        <button type="button" class="mvv-card mvv-card-values" aria-expanded="false" aria-controls="mvv-panel-values">
+                                            <span class="mvv-icon"><img src="../../assets/src/aboutus/item-5.webp" alt="Valores" title=""></span>
+                                            <h3 class="mvv-title">VALORES</h3>
+                                            <i class="fa fa-chevron-down mvv-chevron" aria-hidden="true"></i>
+                                        </button>
+                                        <div class="mvv-panel" id="mvv-panel-values">
+                                            <div class="mvv-panel-inner">
+                                                <p class="mvv-panel-title">VALORES ORGANIZACIONALES</p>
+                                                <p>Cualidades que marcarán nuestro camino.</p>
+                                                <ul>
+                                                    <li>Respeto</li>
+                                                    <li>Trabajo en equipo</li>
+                                                    <li>Ética</li>
+                                                    <li>Compromiso organizacional</li>
+                                                    <li>Orientación a resultados</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -343,6 +290,14 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 setNavActive('header-nav-about-us');
+
+                // Mission / Vision / Values: expandable panels
+                $('.mvv-card').on('click', function() {
+                    var $item = $(this).closest('.mvv-item');
+                    var open = !$item.hasClass('open');
+                    $item.toggleClass('open', open);
+                    $(this).attr('aria-expanded', open);
+                });
             });
         </script>
     </body>
